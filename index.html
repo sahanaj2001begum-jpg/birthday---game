@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Bestie</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="stars" id="star-bg"></div>
+<div class="container">
+<div class="screen active" id="s1"><h1>Happy Birthday Chagol Pagol 🎁💝😭</h1><p>Welcome, bestie... or should I say chagol?</p><p class="sad-text">Please proceed. If you have time for me, that is.</p><button class="btn" onclick="nextScreen(2)">Begin</button></div>
+<div class="screen" id="s2"><h1>A Simple Query</h1><p>Do you care about me at all?</p><p class="sad-text">Be honest. Though I already feel the truth.</p><div class="btn-container"><button class="btn" onclick="nextScreen(3)">Yes</button><button class="btn" id="no-btn" onmouseover="moveNoBtn()" onclick="moveNoBtn()">No</button></div></div>
+<div class="screen" id="s3"><h1>Verification Challenge (1/3)</h1><p>Rewrite this sentence exactly:</p><p class="highlight">I am the chagol</p><input type="text" id="rw1" placeholder="Type here..."><button class="btn" onclick="checkRewrite(1,'I am the chagol',4)">Verify</button><p class="sad-text" id="err1"></p></div>
+<div class="screen" id="s4"><h1>Verification Challenge (2/3)</h1><p>Rewrite this sentence exactly:</p><p class="highlight">Everyone leaves when they find someone better</p><input type="text" id="rw2" placeholder="Type here..."><button class="btn" onclick="checkRewrite(2,'Everyone leaves when they find someone better',5)">Verify</button><p class="sad-text" id="err2"></p></div>
+<div class="screen" id="s5"><h1>Verification Challenge (3/3)</h1><p>Rewrite this final sentence:</p><p class="highlight">I do not give priority or value anymore</p><input type="text" id="rw3" placeholder="Type here..."><button class="btn" onclick="checkRewrite(3,'I do not give priority or value anymore',6)">Verify</button><p class="sad-text" id="err3"></p></div>
+<div class="screen" id="s6"><h1>Priority Assessment (1/2)</h1><p>Who occupies your true attention and thoughts daily?</p><button class="quiz-option" onclick="wrongQuiz(this)">Others / New Friends</button><button class="quiz-option" onclick="nextScreen(7)">You (My Introvert Bestie)</button><button class="quiz-option" onclick="wrongQuiz(this)">Social Media Circles</button><p class="sad-text" id="quiz-err1"></p></div>
+<div class="screen" id="s7"><h1>Priority Assessment (2/2)</h1><p>Whom do you instinctively love and care for the most?</p><button class="quiz-option" onclick="wrongQuiz(this)">The ones who neglect you</button><button class="quiz-option" onclick="wrongQuiz(this)">Anyone else but you</button><button class="quiz-option" onclick="nextScreen(8)">You (Always and Only)</button><p class="sad-text" id="quiz-err2"></p></div>
+<div class="screen" id="s8"><h1>Catch Your True Focus</h1><p>Collect 3 'You' stars. Avoid clicking 'Others'.</p><div id="catcher-zone"></div><p class="sad-text" id="star-status">Score: 0/3</p></div>
+<div class="screen" id="s9"><h1>The Wheel of Consequence</h1><p>Spin to see what fate decides for us today.</p><div class="wheel-container"><div class="wheel-pointer"></div><div class="wheel-inner" id="wheel-text">?</div></div><button class="btn" id="spin-btn" onclick="spinWheel()">Spin Wheel</button><p class="sad-text" id="wheel-status"></p></div>
+<div class="screen" id="s10"><h1>Decryption Complete</h1><p>Despite everything, these system logs remain true about you:</p><p class="highlight large" id="compliment-text">Click below to read logs...</p><button class="btn" id="comp-btn" onclick="showCompliment()">Next Log</button></div>
+<div class="screen" id="s11"><h1 class="final-title">Happy Birthday to you Bestie 🎂❤️</h1><p class="final-message">Happy Birthday, Bestie. I know things change, and maybe I am no longer the person you look for first. It hurts to see you happier with others, feeling like I lost my priority in your life. But today is your day, and despite my silent grievances, your happiness matters to me. I deeply respect you and the bond we shared. May you get everything you wish for, even if it is without me. Always stay safe, chagol.</p><div class="cake" id="final-cake" onclick="cutCake()">🎂</div><p class="cake-instruction" id="cake-instruction">Tap the cake to cut it</p></div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
